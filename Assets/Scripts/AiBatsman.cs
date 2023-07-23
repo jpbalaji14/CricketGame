@@ -22,6 +22,7 @@ public class AiBatsman : MonoBehaviour
     public float hitTimer;
     public float maxHitDuration;
     public Vector2 minMaxHitVelocity;
+    public static Action<Transform> onBallHit;
     // Start is called before the first frame update
     void Start()
     {
@@ -142,5 +143,7 @@ public class AiBatsman : MonoBehaviour
         float hitVeloctiy = Mathf.Lerp(minMaxHitVelocity.y, minMaxHitVelocity.x,lerp);
 
         ball.GetComponent<Rigidbody>().velocity = (Vector3.back + Vector3.up + Vector3.right * UnityEngine.Random.Range(-1f,1f)) * hitVeloctiy;
+
+        onBallHit?.Invoke(ball);
     }
 }

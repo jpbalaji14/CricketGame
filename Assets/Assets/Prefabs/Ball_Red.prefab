@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4598361500539471484}
   - component: {fileID: 2560237417099796991}
   - component: {fileID: 2285327000213976544}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ball_Renderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 6908163047486317865}
   - component: {fileID: 8630061209577559908}
   - component: {fileID: 8361091099252512594}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 5494127543873755726}
   - component: {fileID: 2035652307935958438}
   - component: {fileID: 5491014914104704781}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ball_Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}

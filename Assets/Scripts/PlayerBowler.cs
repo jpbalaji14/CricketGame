@@ -17,6 +17,7 @@ public class PlayerBowler : MonoBehaviour
     public Transform ballTarget;
     private float bowlingSpeed;
     public float flightDurationMultiplier;
+    public static Action<float> onBallThrown;
     // Start is called before the first frame update
     void Start()
     {
@@ -82,8 +83,8 @@ public class PlayerBowler : MonoBehaviour
 
         float flightDuration = flightDurationMultiplier * distance / velocity;
         Debug.Log("Duration : " + flightDuration+ ", BowlSpeed : " + bowlingSpeed);
-        //ballLauncherScript.TESTBowl(fromPos);
-    ballLauncherScript.LaunchBall(fromPos,targetPos,flightDuration);
+        ballLauncherScript.LaunchBall(fromPos,targetPos,flightDuration);
+        onBallThrown?.Invoke(flightDuration);
     }
 
 

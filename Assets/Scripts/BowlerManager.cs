@@ -14,6 +14,10 @@ public class BowlerManager : MonoBehaviour
     public static Action OnBowlingStarted;
     public AnimationCurve bowlingSpeedCurve;
     public Vector2 minMaxBowlingSpeed;
+    private void Awake()
+    {
+        Application.targetFrameRate = 60;
+    }
     // Start is called before the first frame update
     void Start()
     {
